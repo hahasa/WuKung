@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="text_padding">
+        <item name="android:paddingStart">@dimen/text_padding_horizontal</item>
+        <item name="android:paddingEnd">@dimen/text_padding_horizontal</item>
+        <item name="android:paddingTop">@dimen/text_padding_vertical</item>
+        <item name="android:paddingBottom">@dimen/text_padding_vertical</item>
+    </style>
+
+    <style name="button_padding_horizontal">
+        <item name="android:paddingStart">@dimen/button_padding_horizontal</item>
+        <item name="android:paddingEnd">@dimen/button_padding_horizontal</item>
+    </style>
+
+    <style name="button_padding_vertical">
+        <item name="android:paddingTop">@dimen/button_padding_vertical</item>
+        <item name="android:paddingBottom">@dimen/button_padding_vertical</item>
+    </style>
+
+    <style name="popup_window_item_padding_vertical">
+        <item name="android:paddingTop">@dimen/popup_window_item_padding_vertical</item>
+        <item name="android:paddingBottom">@dimen/popup_window_item_padding_vertical</item>
+    </style>
+
+    <style name="ctx_filter_drawable" parent="button_padding_horizontal">
+        <item name="android:drawableEnd">@drawable/ctx_filter_drawable</item>
+    </style>
+
+</resources>

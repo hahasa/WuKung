@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#e6e6e6</color>
+    <color name="colorPrimaryDark">#e6e6e6</color>
+    <color name="colorAccent">#f85f48</color>
+    <color name="colorSecondary">#c4c4c4</color>
+
+
+    <!-- bars -->
+    <color name="assist_bar_bg">#ededed</color>
+
+
+    <!-- divider -->
+    <color name="divider_color">#d8d8d8</color>
+
+
+    <!-- text color -->
+    <color name="toolbar_title_text_color">#000000</color>
+    <color name="text_color">#333333</color>
+    <color name="secondary_text_color">@color/colorSecondary</color>
+</resources>

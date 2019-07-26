@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="ctx_filter_drawable" parent="button_padding_horizontal">
+        <item name="android:drawableEnd">@drawable/ic_arrow_right_black</item>
+        <item name="android:drawableTint">@color/ctx_default_color</item>
+    </style>
+</resources>

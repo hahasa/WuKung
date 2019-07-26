@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.AppCompatCheckedTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@android:id/text1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:drawableEnd="@drawable/ic_tri_state_sort"
+    android:drawablePadding="@dimen/drawable_padding"
+    android:textColor="@color/tab_color"
+    android:textSize="@dimen/text_size"
+    tools:text="@string/sort_by_price" />

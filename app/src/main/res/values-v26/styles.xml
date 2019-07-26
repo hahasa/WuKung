@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="text_padding">
+        <item name="android:paddingVertical">@dimen/text_padding_vertical</item>
+        <item name="android:paddingHorizontal">@dimen/text_padding_horizontal</item>
+    </style>
+
+    <style name="button_padding_horizontal">
+        <item name="android:paddingHorizontal">@dimen/button_padding_horizontal</item>
+    </style>
+
+    <style name="button_padding_vertical">
+        <item name="android:paddingVertical">@dimen/button_padding_vertical</item>
+    </style>
+
+    <style name="popup_window_item_padding_vertical">
+        <item name="android:paddingVertical">@dimen/popup_window_item_padding_vertical</item>
+    </style>
+
+</resources>

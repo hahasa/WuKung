@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- bars height-->
+    <dimen name="assist_bar_height">38dp</dimen>
+
+
+    <dimen name="divider_height_1px">1px</dimen>
+
+
+    <!-- text size -->
+    <dimen name="toolbar_title_text_size">17sp</dimen>
+    <dimen name="text_size">13sp</dimen>
+
+
+    <!-- padding -->
+    <dimen name="drawable_padding">3dp</dimen>
+    <dimen name="text_padding_vertical">5dp</dimen>
+    <dimen name="text_padding_horizontal">10dp</dimen>
+    <dimen name="button_padding_horizontal">15dp</dimen>
+    <dimen name="button_padding_vertical">15dp</dimen>
+    <dimen name="popup_window_item_padding_vertical">15dp</dimen>
+
+</resources>
