@@ -6,7 +6,7 @@ import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 
 /**
- * @author hhs
+ * @author Haha Sang
  * Created on 2019/2/27
  */
 private const val TAG = "LogActivity"

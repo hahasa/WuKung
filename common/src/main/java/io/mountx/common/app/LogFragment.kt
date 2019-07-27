@@ -10,7 +10,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 
 /**
- * @author hhs
+ * @author Haha Sang
  * Created on 2019/3/4
  */
 private const val TAG = "LogFragment"

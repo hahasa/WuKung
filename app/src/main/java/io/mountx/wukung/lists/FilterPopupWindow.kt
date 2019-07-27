@@ -14,7 +14,7 @@ import rx.subjects.PublishSubject
 import rx.subjects.SerializedSubject
 
 /**
- * @author hhs
+ * @author Haha Sang
  * Created on 2019-07-25
  */
 class FilterPopupWindow(context: Context, private val filterParam: FilterParam? = null) :

@@ -6,10 +6,9 @@ import com.google.android.material.tabs.TabLayout
 import io.mountx.wukung.R
 
 /**
- * @author hhs
+ * @author Haha Sang
  * Created on 2019-06-28
  */
-
 private const val SORT_BY_DEFAULT = "default"
 private const val SORT_BY_SCORE = "score"
 private const val SORT_BY_DISTANCE = "distance"
