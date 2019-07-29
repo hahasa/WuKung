@@ -7,15 +7,19 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.annotation.LayoutRes
 import androidx.fragment.app.Fragment
 
 /**
- * @author Haha Sang
+ * @author Ha Sang
  * Created on 2019/3/4
  */
 private const val TAG = "LogFragment"
 
-open class LogFragment : Fragment() {
+open class LogFragment : Fragment {
+
+    constructor() : super()
+    constructor(@LayoutRes contentLayoutId: Int) : super(contentLayoutId)
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
