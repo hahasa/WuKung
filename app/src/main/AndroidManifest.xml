@@ -27,6 +27,10 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoListChoiceIndicatorSingle" />
 
+        <activity
+            android:name=".layout.LayoutActivity"
+            android:label="@string/layout_activity_title"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

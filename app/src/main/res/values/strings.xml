@@ -25,8 +25,11 @@
     <!-- activity title -->
     <string name="main_activity_title">主页</string>
     <string name="lists_activity_title">列表</string>
+    <string name="layout_activity_title">Layout</string>
 
 
     <!-- test data -->
     <string name="test_simple_text">云想衣裳花想容，春风拂槛露华浓。若非群玉山头见，会向瑶台月下逢。</string>
+    <string name="test_short_text">云想衣裳花想容</string>
+    <string name="libai">李白</string>
 </resources>

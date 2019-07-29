@@ -6,6 +6,11 @@
         <item name="android:paddingHorizontal">@dimen/text_padding_horizontal</item>
     </style>
 
+    <style name="label_padding">
+        <item name="android:paddingVertical">@dimen/label_padding_vertical</item>
+        <item name="android:paddingHorizontal">@dimen/label_padding_horizontal</item>
+    </style>
+
     <style name="button_padding_horizontal">
         <item name="android:paddingHorizontal">@dimen/button_padding_horizontal</item>
     </style>

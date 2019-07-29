@@ -10,6 +10,7 @@
     <!-- text size -->
     <dimen name="toolbar_title_text_size">17sp</dimen>
     <dimen name="text_size">13sp</dimen>
+    <dimen name="label_text_size">10sp</dimen>
 
 
     <!-- padding -->
@@ -19,5 +20,7 @@
     <dimen name="button_padding_horizontal">15dp</dimen>
     <dimen name="button_padding_vertical">15dp</dimen>
     <dimen name="popup_window_item_padding_vertical">15dp</dimen>
+    <dimen name="label_padding_vertical">2dp</dimen>
+    <dimen name="label_padding_horizontal">4dp</dimen>
 
 </resources>
