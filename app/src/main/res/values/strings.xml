@@ -20,12 +20,14 @@
     <!-- button -->
     <string name="reset_button">重置</string>
     <string name="confirm_button">确定</string>
+    <string name="start_button">开始</string>
 
 
     <!-- activity title -->
     <string name="main_activity_title">主页</string>
     <string name="lists_activity_title">列表</string>
     <string name="layout_activity_title">Layout</string>
+    <string name="countdown_activity_title">倒计时</string>
 
 
     <!-- test data -->

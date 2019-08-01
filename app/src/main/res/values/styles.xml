@@ -74,6 +74,11 @@
         <item name="android:textStyle">bold</item>
     </style>
 
+    <style name="single_button" parent="single_button_bg">
+        <item name="android:textSize">@dimen/text_size</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textStyle">bold</item>
+    </style>
 
     <!-- label -->
     <style name="label" parent="label_bg">
