@@ -7,7 +7,7 @@ import android.view.View
 import android.widget.TextView
 import io.mountx.common.app.LogActivity
 import io.mountx.wukung.R
-import io.mountx.wukung.layout.LayoutActivity
+import io.mountx.wukung.drawable.CountdownActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : LogActivity() {
@@ -21,7 +21,7 @@ class MainActivity : LogActivity() {
         }
         initToolbar()
         findViewById<TextView>(R.id.tv_hello).setOnClickListener {
-            val intent = Intent(this, LayoutActivity::class.java)
+            val intent = Intent(this, CountdownActivity::class.java)
             startActivity(intent)
         }
     }

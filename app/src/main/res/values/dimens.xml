@@ -22,5 +22,7 @@
     <dimen name="popup_window_item_padding_vertical">15dp</dimen>
     <dimen name="label_padding_vertical">2dp</dimen>
     <dimen name="label_padding_horizontal">4dp</dimen>
+    <dimen name="single_button_horizontal">20dp</dimen>
+    <dimen name="single_button_vertical">10dp</dimen>
 
 </resources>

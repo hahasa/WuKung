@@ -31,6 +31,11 @@
             android:name=".layout.LayoutActivity"
             android:label="@string/layout_activity_title"
             android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".drawable.CountdownActivity"
+            android:label="@string/countdown_activity_title"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

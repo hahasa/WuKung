@@ -8,6 +8,13 @@
         <item name="android:paddingBottom">@dimen/text_padding_vertical</item>
     </style>
 
+    <style name="single_button_padding">
+        <item name="android:paddingStart">@dimen/single_button_horizontal</item>
+        <item name="android:paddingEnd">@dimen/single_button_horizontal</item>
+        <item name="android:paddingTop">@dimen/single_button_vertical</item>
+        <item name="android:paddingBottom">@dimen/single_button_vertical</item>
+    </style>
+
     <style name="card" parent="text_padding">
         <item name="android:background">@drawable/bg_rectangle_4dp_ededed</item>
     </style>
@@ -42,4 +49,7 @@
         <item name="android:drawableEnd">@drawable/ctx_filter_drawable</item>
     </style>
 
+    <style name="single_button_bg" parent="single_button_padding">
+        <item name="android:background">@drawable/bg_rectangle_4dp_ededed</item>
+    </style>
 </resources>
