@@ -41,8 +41,8 @@ dependencies {
     testImplementation "junit:junit:$junit"
     androidTestImplementation "androidx.test:runner:$runner"
     androidTestImplementation "androidx.test.espresso:espresso-core:$espresso"
-    implementation "io.reactivex:rxjava:$rxjava"
-    implementation("io.reactivex:rxandroid:$rxandroid") {
+    implementation "io.reactivex.rxjava3:rxjava:$rxjava"
+    implementation("io.reactivex.rxjava2:rxandroid:$rxandroid") {
         transitive = false
     }
 }
