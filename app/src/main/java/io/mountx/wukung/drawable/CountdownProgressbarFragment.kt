@@ -4,11 +4,11 @@ import android.os.Bundle
 import android.view.View
 import io.mountx.common.app.LogFragment
 import io.mountx.wukung.R
+import io.reactivex.Flowable
+import io.reactivex.android.schedulers.AndroidSchedulers
+import io.reactivex.disposables.Disposable
+import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.fragment_countdown_progressbar.*
-import rx.Observable
-import rx.Subscription
-import rx.android.schedulers.AndroidSchedulers
-import rx.schedulers.Schedulers
 import java.util.concurrent.TimeUnit
 
 /**
@@ -21,7 +21,7 @@ private const val COUNTDOWN_SECOND = 100
 class CountdownProgressbarFragment : LogFragment(R.layout.fragment_countdown_progressbar) {
 
     private var restSecond = 0
-    private var countDownSubscription: Subscription? = null
+    private var countDownDisposable: Disposable? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,9 +38,9 @@ class CountdownProgressbarFragment : LogFragment(R.layout.fragment_countdown_pro
     }
 
     private fun startCountdownIfNeeded() {
-        if (restSecond > 0 && countDownSubscription == null) {
+        if (restSecond > 0 && countDownDisposable == null) {
             updateCountdownProgressView()
-            countDownSubscription = Observable
+            countDownDisposable = Flowable
                     .interval(1000, TimeUnit.MILLISECONDS)
                     .subscribeOn(Schedulers.io())
                     .doOnNext {
@@ -77,12 +77,8 @@ class CountdownProgressbarFragment : LogFragment(R.layout.fragment_countdown_pro
     }
 
     private fun stopCountdown() {
-        countDownSubscription?.let {
-            if (!it.isUnsubscribed) {
-                it.unsubscribe()
-            }
-            countDownSubscription = null
-        }
+        countDownDisposable?.takeUnless { it.isDisposed }?.dispose()
+        countDownDisposable = null
     }
 
     override fun onDestroy() {
