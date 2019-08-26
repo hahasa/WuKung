@@ -9,30 +9,28 @@ import android.widget.RadioGroup
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import io.mountx.wukung.R
-import rx.Observable
-import rx.subjects.PublishSubject
-import rx.subjects.SerializedSubject
+import io.reactivex.Maybe
+import io.reactivex.subjects.MaybeSubject
 
 /**
- * @author Haha Sang
+ * @author Ha Sang
  * Created on 2019-07-25
  */
 class FilterPopupWindow(context: Context, private val filterParam: FilterParam? = null) :
-    PopupWindow(
-        LayoutInflater.from(context).inflate(R.layout.popup_window_list_filter, null),
-        WindowManager.LayoutParams.MATCH_PARENT,
-        WindowManager.LayoutParams.WRAP_CONTENT,
-        true
-    ) {
+        PopupWindow(
+                LayoutInflater.from(context).inflate(R.layout.popup_window_list_filter, null),
+                WindowManager.LayoutParams.MATCH_PARENT,
+                WindowManager.LayoutParams.WRAP_CONTENT,
+                true
+        ) {
 
-    private val subject: SerializedSubject<FilterResult, FilterResult>
+    private val subject: MaybeSubject<FilterParam>
     private var radioGroup: RadioGroup? = null
     private var dismissFromConfirm: Boolean? = null
 
     init {
         setBackgroundDrawable(ContextCompat.getDrawable(context, android.R.color.transparent))
-        val publishSubject = PublishSubject.create<FilterResult>()
-        subject = SerializedSubject(publishSubject)
+        subject = MaybeSubject.create()
         initView()
     }
 
@@ -58,22 +56,21 @@ class FilterPopupWindow(context: Context, private val filterParam: FilterParam? 
         }
     }
 
-    fun showAsObservable(view: View): Observable<FilterResult> {
+    fun showAsMaybe(view: View): Maybe<FilterParam> {
         showAsDropDown(view)
         return subject
     }
 
     override fun dismiss() {
         super.dismiss()
-        subject.onNext(getFilterResult())
-        subject.onCompleted()
+        internalPublish()
     }
 
-    private fun getFilterResult(): FilterResult {
-        return if (dismissFromConfirm == true) {
-            FilterResult(true, FilterParam(getCheckedId()))
+    private fun internalPublish() {
+        if (dismissFromConfirm == true) {
+            subject.onSuccess(FilterParam(getCheckedId()))
         } else {
-            FilterResult()
+            subject.onComplete()
         }
     }
 
@@ -92,12 +89,5 @@ class FilterPopupWindow(context: Context, private val filterParam: FilterParam? 
         const val BJ = "bj"
     }
 
-    data class FilterParam(
-        val city: String?
-    )
-
-    data class FilterResult(
-        val dismissFromConfirm: Boolean = false,
-        val param: FilterParam? = null
-    )
+    data class FilterParam(val city: String?)
 }

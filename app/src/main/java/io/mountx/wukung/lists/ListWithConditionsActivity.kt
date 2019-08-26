@@ -8,9 +8,10 @@ import com.google.android.material.tabs.TabLayout
 import com.google.gson.Gson
 import io.mountx.common.app.LogActivity
 import io.mountx.wukung.R
+import io.reactivex.android.schedulers.AndroidSchedulers
+import io.reactivex.disposables.Disposable
 import kotlinx.android.synthetic.main.activity_list_with_conditions.*
 import kotlinx.android.synthetic.main.activity_main.toolbar
-import rx.android.schedulers.AndroidSchedulers
 
 /**
  * @author Haha Sang
@@ -23,6 +24,7 @@ private const val FILTER_KEY = "filter_key"
 class ListWithConditionsActivity : LogActivity(), TabLayout.OnTabSelectedListener {
 
     private var filterParam: FilterPopupWindow.FilterParam? = null
+    private var disposable: Disposable? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -67,18 +69,18 @@ class ListWithConditionsActivity : LogActivity(), TabLayout.OnTabSelectedListene
     }
 
     private fun showFilterPopupWindow(target: View) {
-        FilterPopupWindow(this, filterParam)
-            .showAsObservable(target)
-            .subscribeOn(AndroidSchedulers.mainThread())
-            .observeOn(AndroidSchedulers.mainThread())
-            .subscribe({
-                if (it.dismissFromConfirm) {
-                    filterParam = it.param
+        disposable = FilterPopupWindow(this, filterParam)
+                .showAsMaybe(target)
+                .subscribeOn(AndroidSchedulers.mainThread())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe({
+                    filterParam = it
                     refreshFilterButton()
-                }
-            }, {
-                //ignore
-            })
+                }, {
+                    //ignore
+                }, {
+                    //click popupWindow outside cancel
+                })
     }
 
     private fun refreshFilterButton() {
@@ -109,6 +111,7 @@ class ListWithConditionsActivity : LogActivity(), TabLayout.OnTabSelectedListene
     override fun onDestroy() {
         super.onDestroy()
         tl_sort.removeOnTabSelectedListener(this)
+        disposable?.takeUnless { it.isDisposed }?.dispose()
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
