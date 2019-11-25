@@ -8,7 +8,7 @@ buildscript {
 
 
         //kotlin
-        kotlin_version = '1.3.41'
+        kotlin_version = '1.3.60'
 
 
         //app
