@@ -1,56 +1,77 @@
 <resources>
 
-    <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <!-- Customize your theme here. -->
+        <!-- Color palette -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+
+        <!-- Text styles -->
+        <item name="android:textColorPrimary">@color/textColorPrimary</item>
+        <item name="android:textColorSecondary">@color/textColorSecondary</item>
+        <item name="android:textAppearanceSmall">@style/AppTextAppearance.Small</item>
+
+        <!-- Dialog attrs-->
+        <item name="dialogTheme">@style/AppThemeOverlay.Dialog</item>
+
+        <!-- Toolbar -->
+        <item name="toolbarStyle">@style/AppWidget.Toolbar</item>
     </style>
 
-    <style name="AppTheme.NoListChoiceIndicatorSingle" parent="AppTheme">
+    <style name="AppTheme.NoListChoiceIndicatorSingle">
         <item name="android:listChoiceIndicatorSingle">@null</item>
         <item name="listChoiceIndicatorSingleAnimated">@null</item>
     </style>
 
+    <style name="Base.AppThemeOverlay.Dialog" parent="ThemeOverlay.AppCompat.Dialog" />
 
-    <!-- fragment -->
-    <style name="fragment_root_view" parent="button_padding_horizontal">
+    <style name="Base.AppThemeOverlay.AppCompat.Dialog" parent="Base.AppThemeOverlay.Dialog" />
+
+    <style name="AppThemeOverlay.Dialog" parent="Base.AppThemeOverlay.AppCompat.Dialog" />
+
+    <style name="AppThemeOverlay.Dialog.Input">
+        <item name="android:windowSoftInputMode">stateAlwaysVisible</item>
+    </style>
+
+
+    <!-- Fragment -->
+    <style name="Base.AppFragment" parent="">
         <item name="android:background">@android:color/white</item>
     </style>
 
+    <style name="AppFragment" parent="Base.AppFragment.AppCompat" />
 
-    <!-- toolbar -->
-    <style name="normal_toolbar">
+
+    <!-- Toolbar -->
+    <style name="AppWidget.Toolbar" parent="Widget.AppCompat.Toolbar">
         <item name="android:background">@color/colorPrimary</item>
-        <item name="titleTextAppearance">@style/toolbar_title</item>
+        <item name="titleTextAppearance">@style/AppTextAppearance.Widget.Toolbar.Title</item>
     </style>
 
-    <style name="toolbar_title">
-        <item name="android:textColor">@color/toolbar_title_text_color</item>
+    <style name="AppTextAppearance.Widget.Toolbar.Title" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
         <item name="android:textSize">@dimen/toolbar_title_text_size</item>
         <item name="android:textStyle">bold</item>
     </style>
 
 
-    <!-- text -->
-    <style name="text_appearance">
-        <item name="android:textColor">@color/text_color</item>
+    <style name="AppTextAppearance.Small" parent="TextAppearance.AppCompat.Small">
+        <item name="android:textColor">@color/textColorSecondary</item>
         <item name="android:textSize">@dimen/text_size</item>
     </style>
 
-    <style name="common_text" parent="text_padding">
-        <item name="android:textSize">@dimen/text_size</item>
+    <style name="AppTextAppearance.Small.Gray">
+        <item name="android:textColor">@color/textColorTertiary</item>
+    </style>
+
+    <style name="Base.AppWidgetOverlay.TextView.Text" parent="">
         <item name="android:lineSpacingExtra">3dp</item>
     </style>
 
-    <style name="text" parent="common_text">
-        <item name="android:textColor">@color/text_color</item>
-    </style>
+    <style name="AppWidgetOverlay.TextView.Text" parent="Base.AppWidgetOverlay.Compat.TextView.Text" />
 
-    <style name="secondary_text" parent="common_text">
-        <item name="android:textColor">@color/secondary_text_color</item>
-    </style>
+    <style name="Base.AppLayout.Card" parent="Base.AppLayout.Compat.Card" />
+
+    <style name="AppLayout.Card.Padding" parent="Base.AppLayout.Compat.Card.Padding" />
 
     <style name="popup_window_item" parent="popup_window_item_padding_vertical">
         <item name="android:textSize">@dimen/text_size</item>
@@ -102,7 +123,7 @@
     </style>
 
     <style name="tab_text_appearance">
-        <item name="android:textColor">@color/secondary_text_color</item>
+        <item name="android:textColor">@color/textColorTertiary</item>
         <item name="android:textSize">@dimen/text_size</item>
     </style>
 </resources>

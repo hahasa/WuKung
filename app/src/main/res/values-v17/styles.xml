@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="text_padding">
+    <style name="Base.AppWidgetOverlay.Compat.TextView.Text" parent="Base.AppWidgetOverlay.TextView.Text">
         <item name="android:paddingStart">@dimen/text_padding_horizontal</item>
         <item name="android:paddingEnd">@dimen/text_padding_horizontal</item>
         <item name="android:paddingTop">@dimen/text_padding_vertical</item>
@@ -15,8 +15,16 @@
         <item name="android:paddingBottom">@dimen/single_button_vertical</item>
     </style>
 
-    <style name="card" parent="text_padding">
+
+    <style name="Base.AppLayout.Compat.Card" parent="">
         <item name="android:background">@drawable/bg_rectangle_4dp_ededed</item>
+    </style>
+
+    <style name="Base.AppLayout.Compat.Card.Padding" parent="Base.AppLayout.Card">
+        <item name="android:paddingStart">@dimen/text_padding_horizontal</item>
+        <item name="android:paddingEnd">@dimen/text_padding_horizontal</item>
+        <item name="android:paddingTop">@dimen/text_padding_vertical</item>
+        <item name="android:paddingBottom">@dimen/text_padding_vertical</item>
     </style>
 
     <style name="label_padding">
@@ -28,6 +36,12 @@
 
     <style name="label_bg" parent="label_padding">
         <item name="android:background">@drawable/bg_rectangle_4dp_f85f48</item>
+    </style>
+
+
+    <style name="Base.AppFragment.AppCompat" parent="Base.AppFragment">
+        <item name="android:paddingStart">@dimen/button_padding_horizontal</item>
+        <item name="android:paddingEnd">@dimen/button_padding_horizontal</item>
     </style>
 
     <style name="button_padding_horizontal">

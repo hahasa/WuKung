@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="text_padding">
+    <style name="Base.AppFragment.AppCompat" parent="Base.V26.AppFragment.AppCompat" />
+
+    <style name="Base.V26.AppFragment.AppCompat" parent="Base.AppFragment">
+        <item name="android:paddingHorizontal">@dimen/button_padding_horizontal</item>
+    </style>
+
+    <style name="Base.AppWidgetOverlay.Compat.TextView.Text" parent="Base.AppWidgetOverlay.TextView.Text">
+        <item name="android:paddingVertical">@dimen/text_padding_vertical</item>
+        <item name="android:paddingHorizontal">@dimen/text_padding_horizontal</item>
+    </style>
+
+    <style name="Base.AppLayout.Compat.Card.Padding" parent="Base.AppLayout.Card">
         <item name="android:paddingVertical">@dimen/text_padding_vertical</item>
         <item name="android:paddingHorizontal">@dimen/text_padding_horizontal</item>
     </style>
