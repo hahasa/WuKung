@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="card" parent="text_padding">
+    <style name="Base.AppThemeOverlay.AppCompat.Dialog" parent="Base.AppThemeOverlay.Dialog">
+        <item name="android:windowElevation">0dp</item>
+    </style>
+
+    <style name="Base.AppLayout.Compat.Card" parent="">
         <item name="android:background">@drawable/bg_rectangle_4dp_black</item>
         <item name="android:backgroundTint">@color/assist_bar_bg</item>
     </style>

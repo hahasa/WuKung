@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    style="@style/fragment_root_view"
+    style="@style/AppFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:paddingTop="20dp">
 
     <com.google.android.flexbox.FlexboxLayout
-        style="@style/card"
+        style="@style/AppLayout.Card.Padding"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:alignItems="center"
@@ -17,7 +17,6 @@
         app:justifyContent="flex_start">
 
         <TextView
-            style="@style/text_appearance"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ellipsize="end"
@@ -35,7 +34,7 @@
     </com.google.android.flexbox.FlexboxLayout>
 
     <com.google.android.flexbox.FlexboxLayout
-        style="@style/card"
+        style="@style/AppLayout.Card.Padding"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -45,7 +44,6 @@
         app:justifyContent="flex_start">
 
         <TextView
-            style="@style/text_appearance"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ellipsize="end"
@@ -63,7 +61,7 @@
     </com.google.android.flexbox.FlexboxLayout>
 
     <com.google.android.flexbox.FlexboxLayout
-        style="@style/card"
+        style="@style/AppLayout.Card.Padding"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -73,7 +71,6 @@
         app:justifyContent="flex_start">
 
         <TextView
-            style="@style/text_appearance"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/test_simple_text"
