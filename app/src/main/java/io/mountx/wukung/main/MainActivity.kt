@@ -1,13 +1,11 @@
 package io.mountx.wukung.main
 
-import android.content.Intent
+import android.content.pm.PackageManager
 import android.os.Build
 import android.os.Bundle
 import android.view.View
-import android.widget.TextView
 import io.mountx.common.app.LogActivity
 import io.mountx.wukung.R
-import io.mountx.wukung.drawable.CountdownActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : LogActivity() {
@@ -20,10 +18,15 @@ class MainActivity : LogActivity() {
             window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
         }
         initToolbar()
-        findViewById<TextView>(R.id.tv_hello).setOnClickListener {
-            val intent = Intent(this, CountdownActivity::class.java)
-            startActivity(intent)
+        initActivityEntrances()
+    }
+
+    private fun initActivityEntrances() {
+        val packageInfo = packageManager.getPackageInfo(packageName, PackageManager.GET_ACTIVITIES)
+        val activitiesWithoutMainActivity = packageInfo.activities?.filter {
+            it.name != MainActivity::class.java.name
         }
+        recycler_view_activity_entrances.adapter = ActivityEntrancesAdapter(activitiesWithoutMainActivity)
     }
 
     private fun initToolbar() {
