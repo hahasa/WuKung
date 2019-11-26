@@ -23,7 +23,7 @@ enum class PriceSortStatus {
 }
 
 fun TabLayout.Tab.isPriceTab(): Boolean {
-    return text == parent.context.getString(R.string.sort_by_price)
+    return text == parent?.context?.getString(R.string.sort_by_price)
 }
 
 private fun TabLayout.Tab.getTabCustomAppCompatCheckedTextView(): AppCompatCheckedTextView? {
