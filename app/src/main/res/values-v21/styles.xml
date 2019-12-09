@@ -10,13 +10,12 @@
         <item name="android:backgroundTint">@color/assist_bar_bg</item>
     </style>
 
-    <style name="label_bg" parent="label_padding">
+    <style name="Base.AppWidgetOverlay.Compat.TextView.Label" parent="Base.AppWidgetOverlay.TextView.Label">
         <item name="android:background">@drawable/bg_rectangle_4dp_black</item>
         <item name="android:backgroundTint">@color/colorAccent</item>
     </style>
 
-    <style name="single_button_bg" parent="single_button_padding">
-        <item name="android:background">@drawable/bg_rectangle_4dp_black</item>
-        <item name="android:backgroundTint">@color/assist_bar_bg</item>
+    <style name="Base.AppWidget.Compat.Button" parent="Base.AppWidget.Button">
+        <item name="android:stateListAnimator">@null</item>
     </style>
 </resources>

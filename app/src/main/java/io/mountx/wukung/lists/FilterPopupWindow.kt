@@ -47,10 +47,10 @@ class FilterPopupWindow(context: Context, private val filterParam: FilterParam? 
                 check(it)
             }
         }
-        contentView?.findViewById<TextView>(R.id.tv_btn_reset)?.setOnClickListener {
+        contentView?.findViewById<TextView>(R.id.btn_reset)?.setOnClickListener {
             radioGroup?.clearCheck()
         }
-        contentView?.findViewById<TextView>(R.id.tv_btn_confirm)?.setOnClickListener {
+        contentView?.findViewById<TextView>(R.id.btn_confirm)?.setOnClickListener {
             dismissFromConfirm = true
             dismiss()
         }

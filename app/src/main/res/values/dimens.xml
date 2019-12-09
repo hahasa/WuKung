@@ -12,17 +12,18 @@
     <dimen name="text_size">13sp</dimen>
     <dimen name="label_text_size">10sp</dimen>
 
+    <!-- Widget -->
+    <dimen name="widget_padding_horizontal">20dp</dimen>
+
+    <!-- Button -->
+    <dimen name="button_corner_radius">4dp</dimen>
+    <dimen name="button_padding_horizontal">20dp</dimen>
+    <dimen name="button_padding_vertical">10dp</dimen>
 
     <!-- padding -->
     <dimen name="drawable_padding">3dp</dimen>
     <dimen name="text_padding_vertical">5dp</dimen>
     <dimen name="text_padding_horizontal">10dp</dimen>
-    <dimen name="button_padding_horizontal">15dp</dimen>
-    <dimen name="button_padding_vertical">15dp</dimen>
-    <dimen name="popup_window_item_padding_vertical">15dp</dimen>
     <dimen name="label_padding_vertical">2dp</dimen>
     <dimen name="label_padding_horizontal">4dp</dimen>
-    <dimen name="single_button_horizontal">20dp</dimen>
-    <dimen name="single_button_vertical">10dp</dimen>
-
 </resources>
