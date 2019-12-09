@@ -25,7 +25,7 @@
             app:layout_flexShrink="1" />
 
         <TextView
-            style="@style/label"
+            style="@style/AppWidgetOverlay.TextView.Label.Padding"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/drawable_padding"
@@ -52,7 +52,7 @@
             app:layout_flexShrink="1" />
 
         <TextView
-            style="@style/label"
+            style="@style/AppWidgetOverlay.TextView.Label.Padding"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/drawable_padding"
@@ -70,14 +70,14 @@
         app:flexWrap="nowrap"
         app:justifyContent="flex_start">
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/test_simple_text"
             app:layout_flexShrink="1" />
 
         <TextView
-            style="@style/label"
+            style="@style/AppWidgetOverlay.TextView.Label.Padding"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/drawable_padding"

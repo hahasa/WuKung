@@ -21,20 +21,18 @@
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tl_sort"
-            style="@style/tab_layout_sort"
+            style="@style/AppWidget.TabLayout"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginStart="5dp"
             app:layout_constraintEnd_toStartOf="@id/ctv_filter"
-            app:layout_constraintStart_toStartOf="parent"
-            app:tabMode="scrollable" />
+            app:layout_constraintStart_toStartOf="parent" />
 
         <CheckedTextView
             android:id="@+id/ctv_filter"
-            style="@style/ctx_filter"
+            style="@style/AppWidget.CheckedTextView.Filter"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:gravity="center"
             android:text="@string/filter_button"
             app:layout_constraintEnd_toEndOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>

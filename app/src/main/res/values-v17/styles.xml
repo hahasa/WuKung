@@ -8,14 +8,6 @@
         <item name="android:paddingBottom">@dimen/text_padding_vertical</item>
     </style>
 
-    <style name="single_button_padding">
-        <item name="android:paddingStart">@dimen/single_button_horizontal</item>
-        <item name="android:paddingEnd">@dimen/single_button_horizontal</item>
-        <item name="android:paddingTop">@dimen/single_button_vertical</item>
-        <item name="android:paddingBottom">@dimen/single_button_vertical</item>
-    </style>
-
-
     <style name="Base.AppLayout.Compat.Card" parent="">
         <item name="android:background">@drawable/bg_rectangle_4dp_ededed</item>
     </style>
@@ -27,43 +19,28 @@
         <item name="android:paddingBottom">@dimen/text_padding_vertical</item>
     </style>
 
-    <style name="label_padding">
+    <style name="Base.AppWidgetOverlay.Compat.TextView.Label" parent="Base.AppWidgetOverlay.TextView.Label">
+        <item name="android:background">@drawable/bg_rectangle_4dp_f85f48</item>
+    </style>
+
+    <style name="Base.AppWidgetOverlay.Compat.TextView.Label.Padding" parent="Base.AppWidgetOverlay.Compat.TextView.Label">
         <item name="android:paddingStart">@dimen/label_padding_horizontal</item>
         <item name="android:paddingEnd">@dimen/label_padding_horizontal</item>
         <item name="android:paddingTop">@dimen/label_padding_vertical</item>
         <item name="android:paddingBottom">@dimen/label_padding_vertical</item>
     </style>
 
-    <style name="label_bg" parent="label_padding">
-        <item name="android:background">@drawable/bg_rectangle_4dp_f85f48</item>
-    </style>
-
-
     <style name="Base.AppFragment.AppCompat" parent="Base.AppFragment">
         <item name="android:paddingStart">@dimen/button_padding_horizontal</item>
         <item name="android:paddingEnd">@dimen/button_padding_horizontal</item>
     </style>
 
-    <style name="button_padding_horizontal">
-        <item name="android:paddingStart">@dimen/button_padding_horizontal</item>
-        <item name="android:paddingEnd">@dimen/button_padding_horizontal</item>
+    <style name="Base.AppWidget.Compat.Padding.Horizontal" parent="">
+        <item name="android:paddingStart">@dimen/widget_padding_horizontal</item>
+        <item name="android:paddingEnd">@dimen/widget_padding_horizontal</item>
     </style>
 
-    <style name="button_padding_vertical">
-        <item name="android:paddingTop">@dimen/button_padding_vertical</item>
-        <item name="android:paddingBottom">@dimen/button_padding_vertical</item>
-    </style>
-
-    <style name="popup_window_item_padding_vertical">
-        <item name="android:paddingTop">@dimen/popup_window_item_padding_vertical</item>
-        <item name="android:paddingBottom">@dimen/popup_window_item_padding_vertical</item>
-    </style>
-
-    <style name="ctx_filter_drawable" parent="button_padding_horizontal">
+    <style name="Base.AppWidget.Compat.CheckedTextView.Filter" parent="Base.AppWidget.CheckedTextView.Filter">
         <item name="android:drawableEnd">@drawable/ctx_filter_drawable</item>
-    </style>
-
-    <style name="single_button_bg" parent="single_button_padding">
-        <item name="android:background">@drawable/bg_rectangle_4dp_ededed</item>
     </style>
 </resources>

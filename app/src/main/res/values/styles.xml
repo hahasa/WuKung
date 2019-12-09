@@ -11,6 +11,10 @@
         <item name="android:textColorSecondary">@color/textColorSecondary</item>
         <item name="android:textAppearanceSmall">@style/AppTextAppearance.Small</item>
 
+        <!-- Button -->
+        <item name="buttonStyle">@style/AppWidget.Button</item>
+        <item name="android:textAppearanceButton">@style/AppTextAppearance.Button</item>
+
         <!-- Dialog attrs-->
         <item name="dialogTheme">@style/AppThemeOverlay.Dialog</item>
 
@@ -53,6 +57,7 @@
         <item name="android:textStyle">bold</item>
     </style>
 
+    <style name="AppTextAppearance.Widget.TabLayout.Tab" parent="AppTextAppearance.Small.Gray" />
 
     <style name="AppTextAppearance.Small" parent="TextAppearance.AppCompat.Small">
         <item name="android:textColor">@color/textColorSecondary</item>
@@ -63,67 +68,78 @@
         <item name="android:textColor">@color/textColorTertiary</item>
     </style>
 
+    <style name="AppTextAppearance.Button" parent="TextAppearance.AppCompat.Button">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/text_size</item>
+    </style>
+
     <style name="Base.AppWidgetOverlay.TextView.Text" parent="">
         <item name="android:lineSpacingExtra">3dp</item>
     </style>
 
     <style name="AppWidgetOverlay.TextView.Text" parent="Base.AppWidgetOverlay.Compat.TextView.Text" />
 
-    <style name="Base.AppLayout.Card" parent="Base.AppLayout.Compat.Card" />
-
-    <style name="AppLayout.Card.Padding" parent="Base.AppLayout.Compat.Card.Padding" />
-
-    <style name="popup_window_item" parent="popup_window_item_padding_vertical">
-        <item name="android:textSize">@dimen/text_size</item>
-        <item name="android:textColor">@color/ctx_default_color</item>
-        <item name="android:gravity">start</item>
-        <item name="android:button">@null</item>
-        <item name="android:background">@null</item>
-    </style>
-
-
-    <!-- button -->
-    <style name="ctx_filter" parent="ctx_filter_drawable">
-        <item name="android:textSize">@dimen/text_size</item>
-        <item name="android:textColor">@color/ctx_default_color</item>
-        <item name="android:drawablePadding">@dimen/drawable_padding</item>
-    </style>
-
-    <style name="button" parent="button_padding_vertical">
-        <item name="android:textSize">@dimen/text_size</item>
-        <item name="android:gravity">center</item>
-        <item name="android:textStyle">bold</item>
-    </style>
-
-    <style name="single_button" parent="single_button_bg">
-        <item name="android:textSize">@dimen/text_size</item>
-        <item name="android:gravity">center</item>
-        <item name="android:textStyle">bold</item>
-    </style>
-
-    <!-- label -->
-    <style name="label" parent="label_bg">
+    <style name="Base.AppWidgetOverlay.TextView.Label" parent="">
         <item name="android:textSize">@dimen/label_text_size</item>
         <item name="android:textColor">@android:color/white</item>
         <item name="android:includeFontPadding">false</item>
     </style>
 
+    <style name="AppWidgetOverlay.TextView.Label.Padding" parent="Base.AppWidgetOverlay.Compat.TextView.Label.Padding" />
+
+    <style name="Base.AppLayout.Card" parent="Base.AppLayout.Compat.Card" />
+
+    <style name="AppLayout.Card.Padding" parent="Base.AppLayout.Compat.Card.Padding" />
+
+    <style name="AppWidgetOverlay.RadioButton.PopupWindowItem" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="android:textAppearance">@style/AppTextAppearance.Small</item>
+        <item name="android:textColor">@color/ctx_default_color</item>
+        <item name="android:button">@null</item>
+        <item name="android:background">@drawable/btn_transparent_shape</item>
+    </style>
+
+
+    <!-- Button -->
+    <style name="Base.AppWidget.Button" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/btn_default_shape</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:minWidth">0dp</item>
+    </style>
+
+    <style name="Base.AppWidget.Compat.Button" parent="Base.AppWidget.Button" />
+
+    <style name="AppWidget.Button" parent="Base.AppWidget.Compat.Button" />
+
+    <style name="AppWidgetOverlay.Button.Transparent" parent="">
+        <item name="android:background">@drawable/btn_transparent_shape</item>
+    </style>
+
+    <style name="AppWidgetOverlay.Button.Transparent.Active">
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
+    <style name="Base.AppWidget.CheckedTextView.Filter" parent="AppWidget.Padding.Horizontal">
+        <item name="android:textAppearance">@style/AppTextAppearance.Small</item>
+        <item name="android:textColor">@color/ctx_default_color</item>
+        <item name="android:drawablePadding">@dimen/drawable_padding</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="AppWidget.CheckedTextView.Filter" parent="Base.AppWidget.Compat.CheckedTextView.Filter" />
+
+    <style name="AppWidget.Padding.Horizontal" parent="Base.AppWidget.Compat.Padding.Horizontal" />
 
     <!-- TabLayout -->
-    <style name="tab_layout_sort">
+    <style name="AppWidget.TabLayout" parent="Widget.Design.TabLayout">
         <item name="tabMinWidth">0dp</item>
         <item name="tabIndicatorHeight">0dp</item>
         <item name="tabBackground">@null</item>
         <item name="tabRippleColor">@null</item>
         <item name="tabPaddingStart">@dimen/text_padding_horizontal</item>
         <item name="tabPaddingEnd">@dimen/text_padding_horizontal</item>
-        <item name="tabTextAppearance">@style/tab_text_appearance</item>
+        <item name="tabTextAppearance">@style/AppTextAppearance.Widget.TabLayout.Tab</item>
         <item name="tabSelectedTextColor">@color/colorAccent</item>
         <item name="android:overScrollMode">never</item>
-    </style>
-
-    <style name="tab_text_appearance">
-        <item name="android:textColor">@color/textColorTertiary</item>
-        <item name="android:textSize">@dimen/text_size</item>
+        <item name="tabMode">scrollable</item>
     </style>
 </resources>

@@ -17,26 +17,13 @@
         <item name="android:paddingHorizontal">@dimen/text_padding_horizontal</item>
     </style>
 
-    <style name="single_button_padding">
-        <item name="android:paddingVertical">@dimen/single_button_vertical</item>
-        <item name="android:paddingHorizontal">@dimen/single_button_horizontal</item>
-    </style>
-
-    <style name="label_padding">
+    <style name="Base.AppWidgetOverlay.Compat.TextView.Label.Padding" parent="Base.AppWidgetOverlay.Compat.TextView.Label">
         <item name="android:paddingVertical">@dimen/label_padding_vertical</item>
         <item name="android:paddingHorizontal">@dimen/label_padding_horizontal</item>
     </style>
 
-    <style name="button_padding_horizontal">
-        <item name="android:paddingHorizontal">@dimen/button_padding_horizontal</item>
-    </style>
-
-    <style name="button_padding_vertical">
-        <item name="android:paddingVertical">@dimen/button_padding_vertical</item>
-    </style>
-
-    <style name="popup_window_item_padding_vertical">
-        <item name="android:paddingVertical">@dimen/popup_window_item_padding_vertical</item>
+    <style name="Base.AppWidget.Compat.Padding.Horizontal" parent="">
+        <item name="android:paddingHorizontal">@dimen/widget_padding_horizontal</item>
     </style>
 
 </resources>
