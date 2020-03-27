@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Base.AppDayNight" parent="Theme.AppCompat.DayNight.NoActionBar" />
+
+    <style name="Base.AppDayNight.AppCompat">
+        <item name="colorPrimary">@color/app_day_color_primary</item>
+        <item name="colorPrimaryDark">@color/app_day_color_primary_dark</item>
+        <item name="colorAccent">@color/app_day_color_accent</item>
+        <item name="colorSecondary">@color/app_day_color_secondary</item>
+    </style>
+
+    <style name="AppDayNight" parent="Base.AppDayNight.AppCompat" />
+</resources>
