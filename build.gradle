@@ -4,7 +4,7 @@ buildscript {
         //android
         androidCompileSdkVersion = 29
         androidMinSdkVersion = 17
-        androidTargetSdkVersion = 28
+        androidTargetSdkVersion = 29
 
 
         //kotlin
