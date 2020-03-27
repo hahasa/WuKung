@@ -28,6 +28,7 @@
     <string name="lists_activity_title">列表</string>
     <string name="layout_activity_title">Layout</string>
     <string name="countdown_activity_title">倒计时</string>
+    <string name="app_light_activity_title">AppLight</string>
 
 
     <!-- test data -->
