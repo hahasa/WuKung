@@ -42,5 +42,12 @@
             android:label="@string/app_light_activity_title"
             android:screenOrientation="portrait"
             android:theme="@style/AppLight" />
+
+        <activity
+            android:name=".theme.AppDayNightActivity"
+            android:label="@string/app_day_night_activity_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppDayNight" />
+
     </application>
 </manifest>

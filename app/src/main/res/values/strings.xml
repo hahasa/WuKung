@@ -29,6 +29,7 @@
     <string name="layout_activity_title">Layout</string>
     <string name="countdown_activity_title">倒计时</string>
     <string name="app_light_activity_title">AppLight</string>
+    <string name="app_day_night_activity_title">AppDayNight</string>
 
 
     <!-- test data -->
