@@ -8,7 +8,7 @@ buildscript {
 
 
         //kotlin
-        kotlin_version = '1.3.70'
+        kotlin_version = '1.3.72'
 
 
         //app
@@ -18,25 +18,26 @@ buildscript {
 
 
         //build
-        buildTools = '3.6.1'
+        buildTools = '4.0.0'
 
 
         //libs
         androidCompat = "1.1.0"
+        fragment = "1.3.0-alpha05"
         constraintlayout = "1.1.3"
-        material = "1.2.0-alpha02"
-        recyclerview = "1.1.0"
-        swipeRefreshLayout = "1.1.0-alpha03"
-        flexbox = "1.1.0"
-        gson = "2.8.5"
-        rxjava = "3.0.0-RC1"
-        rxandroid = "2.1.1"
+        material = '1.2.0-beta01'
+        recyclerview = "1.2.0-alpha03"
+        swipeRefreshLayout = "1.1.0-rc01"
+        flexbox = "2.0.1"
+        gson = '2.8.6'
+        rxjava = '3.0.4'
+        rxandroid = "3.0.0"
 
 
         //test
-        junit = "4.12"
-        runner = "1.3.0-alpha02"
-        espresso = "3.3.0-alpha02"
+        junit = '4.13'
+        runner = '1.3.0-rc01'
+        espresso = '3.3.0-rc01'
     }
 
     repositories {
