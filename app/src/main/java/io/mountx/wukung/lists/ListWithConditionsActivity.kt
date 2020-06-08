@@ -8,8 +8,8 @@ import com.google.android.material.tabs.TabLayout
 import com.google.gson.Gson
 import io.mountx.common.app.LogActivity
 import io.mountx.wukung.R
-import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.disposables.Disposable
+import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
+import io.reactivex.rxjava3.disposables.Disposable
 import kotlinx.android.synthetic.main.activity_list_with_conditions.*
 import kotlinx.android.synthetic.main.activity_main.toolbar
 

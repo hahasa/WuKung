@@ -4,10 +4,10 @@ import android.os.Bundle
 import android.view.View
 import io.mountx.common.app.LogFragment
 import io.mountx.wukung.R
-import io.reactivex.Flowable
-import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.disposables.Disposable
-import io.reactivex.schedulers.Schedulers
+import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
+import io.reactivex.rxjava3.core.Flowable
+import io.reactivex.rxjava3.disposables.Disposable
+import io.reactivex.rxjava3.schedulers.Schedulers
 import kotlinx.android.synthetic.main.fragment_countdown_progressbar.*
 import java.util.concurrent.TimeUnit
 

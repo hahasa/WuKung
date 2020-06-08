@@ -33,6 +33,7 @@ dependencies {
     implementation project(':common')
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation "androidx.appcompat:appcompat:$androidCompat"
+    implementation "androidx.fragment:fragment:$fragment"
     implementation "androidx.constraintlayout:constraintlayout:$constraintlayout"
     implementation "androidx.recyclerview:recyclerview:$recyclerview"
     implementation "androidx.swiperefreshlayout:swiperefreshlayout:$swipeRefreshLayout"
@@ -43,7 +44,7 @@ dependencies {
     androidTestImplementation "androidx.test:runner:$runner"
     androidTestImplementation "androidx.test.espresso:espresso-core:$espresso"
     implementation "io.reactivex.rxjava3:rxjava:$rxjava"
-    implementation("io.reactivex.rxjava2:rxandroid:$rxandroid") {
+    implementation("io.reactivex.rxjava3:rxandroid:$rxandroid") {
         transitive = false
     }
 }
