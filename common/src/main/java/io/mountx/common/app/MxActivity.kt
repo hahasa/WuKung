@@ -1,7 +1,13 @@
 package io.mountx.common.app
 
+import android.content.res.Resources
 import android.os.Build
+import android.util.TypedValue
 import android.view.View
+import android.view.Window
+import androidx.annotation.ColorInt
+import androidx.annotation.RequiresApi
+import io.mountx.common.rom.RomCompatHelper
 
 /**
  * @author Ha Sang
@@ -10,18 +16,63 @@ import android.view.View
 open class MxActivity : LogActivity() {
 
     protected fun requestDefaultStatusBar() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            window.decorView.apply {
-                systemUiVisibility =
-                    systemUiVisibility.and(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR.inv())
+        when {
+            Build.VERSION.SDK_INT >= Build.VERSION_CODES.M -> {
+                window.setLightStatusBar(false)
+            }
+            RomCompatHelper.isLightStatusBarSupportedByRom -> {
+                RomCompatHelper.requestDefaultRomStatusBar(this)
+            }
+            Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP -> {
+                theme.colorPrimaryDark?.also {
+                    window.statusBarColor = it
+                }
+            }
+            else -> {
+                //ignore
             }
         }
     }
 
     protected fun requestLightStatusBar() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            window.decorView.apply {
-                systemUiVisibility = systemUiVisibility.or(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR)
+        when {
+            Build.VERSION.SDK_INT >= Build.VERSION_CODES.M -> {
+                window.setLightStatusBar(true)
+            }
+            RomCompatHelper.isLightStatusBarSupportedByRom -> {
+                RomCompatHelper.requestLightRomStatusBar(this)
+            }
+            Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP -> {
+                theme.colorPrimaryDark?.also {
+                    window.statusBarColor = it
+                }
+            }
+            else -> {
+                //ignore
+            }
+        }
+    }
+
+    private val Resources.Theme.colorPrimaryDark: Int?
+        @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
+        @ColorInt
+        get() {
+            val outValue = TypedValue()
+            val resolved = resolveAttribute(android.R.attr.colorPrimaryDark, outValue, true)
+            return if (resolved && outValue.type >= TypedValue.TYPE_FIRST_COLOR_INT && outValue.type <= TypedValue.TYPE_LAST_COLOR_INT) {
+                outValue.data
+            } else {
+                null
+            }
+        }
+
+    @RequiresApi(Build.VERSION_CODES.M)
+    private fun Window.setLightStatusBar(isLight: Boolean) {
+        decorView.apply {
+            systemUiVisibility = if (isLight) {
+                systemUiVisibility.or(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR)
+            } else {
+                systemUiVisibility.and(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR.inv())
             }
         }
     }
