@@ -31,6 +31,7 @@
     <string name="app_light_activity_title">AppLight</string>
     <string name="app_day_night_activity_title">AppDayNight</string>
     <string name="app_material_activity_title">AppMaterial</string>
+    <string name="ks_main_activity_title">KsMain</string>
 
 
     <!-- test data -->
