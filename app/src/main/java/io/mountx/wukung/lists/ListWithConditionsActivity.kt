@@ -1,12 +1,11 @@
 package io.mountx.wukung.lists
 
-import android.os.Build
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import com.google.android.material.tabs.TabLayout
 import com.google.gson.Gson
-import io.mountx.common.app.LogActivity
+import io.mountx.common.app.MxActivity
 import io.mountx.wukung.R
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.disposables.Disposable
@@ -21,7 +20,7 @@ import kotlinx.android.synthetic.main.activity_main.toolbar
 private const val SORT_KEY = "sort_key"
 private const val FILTER_KEY = "filter_key"
 
-class ListWithConditionsActivity : LogActivity(), TabLayout.OnTabSelectedListener {
+class ListWithConditionsActivity : MxActivity(), TabLayout.OnTabSelectedListener {
 
     private var filterParam: FilterPopupWindow.FilterParam? = null
     private var disposable: Disposable? = null
@@ -30,9 +29,7 @@ class ListWithConditionsActivity : LogActivity(), TabLayout.OnTabSelectedListene
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_list_with_conditions)
         setSupportActionBar(toolbar)
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
-        }
+        requestLightStatusBar()
         initSortTab()
         initFilter()
     }
@@ -70,17 +67,17 @@ class ListWithConditionsActivity : LogActivity(), TabLayout.OnTabSelectedListene
 
     private fun showFilterPopupWindow(target: View) {
         disposable = FilterPopupWindow(this, filterParam)
-                .showAsMaybe(target)
-                .subscribeOn(AndroidSchedulers.mainThread())
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe({
-                    filterParam = it
-                    refreshFilterButton()
-                }, {
-                    //ignore
-                }, {
-                    //click popupWindow outside cancel
-                })
+            .showAsMaybe(target)
+            .subscribeOn(AndroidSchedulers.mainThread())
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribe({
+                filterParam = it
+                refreshFilterButton()
+            }, {
+                //ignore
+            }, {
+                //click popupWindow outside cancel
+            })
     }
 
     private fun refreshFilterButton() {
@@ -95,13 +92,13 @@ class ListWithConditionsActivity : LogActivity(), TabLayout.OnTabSelectedListene
         Toast.makeText(baseContext, tl_sort.getCurrentSortName(), Toast.LENGTH_SHORT).show()
     }
 
-    override fun onRestoreInstanceState(savedInstanceState: Bundle?) {
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
         super.onRestoreInstanceState(savedInstanceState)
-        savedInstanceState?.getString(FILTER_KEY)?.let {
+        savedInstanceState.getString(FILTER_KEY)?.let {
             filterParam = Gson().fromJson(it, FilterPopupWindow.FilterParam::class.java)
             refreshFilterButton()
         }
-        savedInstanceState?.getString(SORT_KEY)?.let {
+        savedInstanceState.getString(SORT_KEY)?.let {
             tl_sort.removeOnTabSelectedListener(this)
             tl_sort.selectTab(it)
             tl_sort.addOnTabSelectedListener(this)
