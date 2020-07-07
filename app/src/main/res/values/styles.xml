@@ -142,4 +142,10 @@
         <item name="android:overScrollMode">never</item>
         <item name="tabMode">scrollable</item>
     </style>
+
+    <style name="Base.KsMain" parent="AppTheme" />
+
+    <style name="Base.KsMain.AppCompat" />
+
+    <style name="AppTheme.KsMain" parent="Base.KsMain.AppCompat" />
 </resources>

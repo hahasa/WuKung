@@ -18,4 +18,10 @@
     <style name="Base.AppWidget.Compat.Button" parent="Base.AppWidget.Button">
         <item name="android:stateListAnimator">@null</item>
     </style>
+
+    <style name="Base.KsMain.AppCompat">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+    </style>
 </resources>

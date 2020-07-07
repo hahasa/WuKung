@@ -5,6 +5,7 @@
     tools:ignore="GoogleAppIndexingWarning">
 
     <application
+        android:name=".WkApplication"
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -54,5 +55,11 @@
             android:label="@string/app_material_activity_title"
             android:screenOrientation="portrait"
             android:theme="@style/AppMaterial" />
+
+        <activity
+            android:name=".main.ks.KsMainActivity"
+            android:label="@string/ks_main_activity_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.KsMain" />
     </application>
 </manifest>
