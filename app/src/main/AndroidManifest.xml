@@ -36,6 +36,23 @@
             android:name=".drawable.CountdownActivity"
             android:label="@string/countdown_activity_title"
             android:screenOrientation="portrait" />
-    </application>
 
+        <activity
+            android:name=".theme.AppLightActivity"
+            android:label="@string/app_light_activity_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppLight" />
+
+        <activity
+            android:name=".theme.AppDayNightActivity"
+            android:label="@string/app_day_night_activity_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppDayNight" />
+
+        <activity
+            android:name=".theme.AppMaterialActivity"
+            android:label="@string/app_material_activity_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppMaterial" />
+    </application>
 </manifest>

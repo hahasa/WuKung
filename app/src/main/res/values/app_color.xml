@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="app_day_color_primary">#e6e6e6</color>
+    <color name="app_day_color_primary_dark">#e6e6e6</color>
+    <color name="app_day_color_accent">#f85f48</color>
+    <color name="app_day_color_secondary">#c4c4c4</color>
+
+</resources>

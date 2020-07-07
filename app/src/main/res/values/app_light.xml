@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Base.AppLight" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/app_day_color_primary</item>
+        <item name="colorPrimaryDark">@color/app_day_color_primary_dark</item>
+        <item name="colorAccent">@color/app_day_color_accent</item>
+        <item name="colorSecondary">@color/app_day_color_secondary</item>
+    </style>
+
+    <style name="Base.AppLight.AppCompat" />
+
+    <style name="AppLight" parent="Base.AppLight.AppCompat" />
+</resources>
