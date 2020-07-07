@@ -9,7 +9,7 @@ import java.util.*
 
 private const val BUILD_PROP_FILE_NAME = "build.prop"
 
-class MxProperties {
+internal class MxProperties {
 
     private val properties: Properties?
     private val methodGetSysProp: Method?
