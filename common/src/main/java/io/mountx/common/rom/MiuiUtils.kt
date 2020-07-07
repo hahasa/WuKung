@@ -5,10 +5,10 @@ import android.view.Window
 
 private const val KEY_MIUI_VERSION_NAME = "ro.miui.ui.version.name"
 
-val isLightStatusBarSupportedByMiui: Boolean
+internal val isLightStatusBarSupportedByMiui: Boolean
     get() = isLollipop()
 
-fun MxProperties.isMiui() = !getSysPropValue(KEY_MIUI_VERSION_NAME).isNullOrEmpty()
+internal fun MxProperties.isMiui() = !getSysPropValue(KEY_MIUI_VERSION_NAME).isNullOrEmpty()
 
 private fun setMiuiStatusBar(activity: Activity, isLight: Boolean) {
     MIUI_FLAG_LIGHT_STATUS_BAR?.let {
@@ -41,10 +41,10 @@ private val MIUI_FLAG_LIGHT_STATUS_BAR: Int?
         null
     }
 
-fun requestLightMiuiStatusBar(activity: Activity) {
+internal fun requestLightMiuiStatusBar(activity: Activity) {
     setMiuiStatusBar(activity, true)
 }
 
-fun requestDefaultMiuiStatusBar(activity: Activity) {
+internal fun requestDefaultMiuiStatusBar(activity: Activity) {
     setMiuiStatusBar(activity, false)
 }

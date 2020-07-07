@@ -15,7 +15,7 @@ object RomCompatHelper {
         }
     }
 
-    val isLightStatusBarSupportedByRom: Boolean
+    internal val isLightStatusBarSupportedByRom: Boolean
         get() {
             return when {
                 isMiui -> isLightStatusBarSupportedByMiui
@@ -23,14 +23,14 @@ object RomCompatHelper {
             }
         }
 
-    fun requestLightRomStatusBar(activity: Activity) {
+    internal fun requestLightRomStatusBar(activity: Activity) {
         if (!isLightStatusBarSupportedByRom) return
         when {
             isMiui -> requestLightMiuiStatusBar(activity)
         }
     }
 
-    fun requestDefaultRomStatusBar(activity: Activity) {
+    internal fun requestDefaultRomStatusBar(activity: Activity) {
         if (!isLightStatusBarSupportedByRom) return
         when {
             isMiui -> requestDefaultMiuiStatusBar(activity)
@@ -38,6 +38,6 @@ object RomCompatHelper {
     }
 }
 
-fun isLollipop() = Build.VERSION.SDK_INT.let {
+internal fun isLollipop() = Build.VERSION.SDK_INT.let {
     it == Build.VERSION_CODES.LOLLIPOP || it == Build.VERSION_CODES.LOLLIPOP_MR1
 }
