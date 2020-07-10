@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Base.AppThemeOverlay.AppCompat.Dialog" parent="Base.AppThemeOverlay.Dialog">
+    <style name="Base.ThemeOverlay.WuKung.Dialog" parent="Base.V17.ThemeOverlay.Dialog">
         <item name="android:windowElevation">0dp</item>
     </style>
 
@@ -19,7 +19,7 @@
         <item name="android:stateListAnimator">@null</item>
     </style>
 
-    <style name="Base.KsMain.AppCompat">
+    <style name="Base.Theme.WuKung.KsMain" parent="Theme.WuKung">
         <item name="android:statusBarColor">@android:color/transparent</item>
         <item name="android:windowTranslucentStatus">false</item>
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>

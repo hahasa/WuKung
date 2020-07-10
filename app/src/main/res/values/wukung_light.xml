@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Base.AppLight" parent="Theme.AppCompat.Light.NoActionBar">
+    <!-- TODO think a better name-->
+    <style name="Base.V17.Theme.WuKung.Light" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/app_day_color_primary</item>
         <item name="colorPrimaryDark">@color/app_day_color_primary_dark</item>
         <item name="colorAccent">@color/app_day_color_accent</item>
         <item name="colorSecondary">@color/app_day_color_secondary</item>
     </style>
 
-    <style name="Base.AppLight.AppCompat" />
+    <style name="Base.Theme.WuKung.Light" parent="Base.V17.Theme.WuKung.Light" />
 
-    <style name="AppLight" parent="Base.AppLight.AppCompat" />
+    <style name="Theme.WuKung.Light" parent="Base.Theme.WuKung.Light" />
 </resources>

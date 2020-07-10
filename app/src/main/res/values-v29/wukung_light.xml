@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Base.AppLight.AppCompat">
+    <style name="Base.Theme.WuKung.Light" parent="Base.V17.Theme.WuKung.Light">
         <item name="android:forceDarkAllowed">true</item>
     </style>
 </resources>
