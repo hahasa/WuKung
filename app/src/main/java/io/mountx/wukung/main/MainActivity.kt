@@ -1,22 +1,18 @@
 package io.mountx.wukung.main
 
 import android.content.pm.PackageManager
-import android.os.Build
 import android.os.Bundle
-import android.view.View
-import io.mountx.common.app.LogActivity
+import io.mountx.common.app.MxActivity
 import io.mountx.wukung.R
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : LogActivity() {
+class MainActivity : MxActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
-        }
+        requestLightStatusBar()
         initToolbar()
         initActivityEntrances()
     }
@@ -26,7 +22,8 @@ class MainActivity : LogActivity() {
         val activitiesWithoutMainActivity = packageInfo.activities?.filter {
             it.name != MainActivity::class.java.name
         }
-        recycler_view_activity_entrances.adapter = ActivityEntrancesAdapter(activitiesWithoutMainActivity)
+        recycler_view_activity_entrances.adapter =
+            ActivityEntrancesAdapter(activitiesWithoutMainActivity)
     }
 
     private fun initToolbar() {
