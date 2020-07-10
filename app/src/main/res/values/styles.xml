@@ -148,4 +148,6 @@
     <style name="Base.KsMain.AppCompat" />
 
     <style name="AppTheme.KsMain" parent="Base.KsMain.AppCompat" />
+
+    <style name="Theme.WuKung.Fullscreen" parent="Theme.MountX.DayNight.NoActionBar.Fullscreen" />
 </resources>

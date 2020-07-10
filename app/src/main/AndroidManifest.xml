@@ -61,5 +61,10 @@
             android:label="@string/ks_main_activity_title"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.KsMain" />
+
+        <activity
+            android:name=".fullscreen.FullscreenActivity"
+            android:theme="@style/Theme.WuKung.Fullscreen"
+            android:screenOrientation="portrait" />
     </application>
 </manifest>
