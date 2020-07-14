@@ -1,6 +1,6 @@
 <resources>
 
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="Theme.WuKung" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Color palette -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
@@ -16,24 +16,24 @@
         <item name="android:textAppearanceButton">@style/AppTextAppearance.Button</item>
 
         <!-- Dialog attrs-->
-        <item name="dialogTheme">@style/AppThemeOverlay.Dialog</item>
+        <item name="dialogTheme">@style/ThemeOverlay.WuKung.Dialog</item>
 
         <!-- Toolbar -->
-        <item name="toolbarStyle">@style/AppWidget.Toolbar</item>
+        <item name="toolbarStyle">@style/Widget.WuKung.Toolbar</item>
     </style>
 
-    <style name="AppTheme.NoListChoiceIndicatorSingle">
+    <style name="Theme.WuKung.NoListChoiceIndicatorSingle">
         <item name="android:listChoiceIndicatorSingle">@null</item>
         <item name="listChoiceIndicatorSingleAnimated">@null</item>
     </style>
 
-    <style name="Base.AppThemeOverlay.Dialog" parent="ThemeOverlay.AppCompat.Dialog" />
+    <style name="Base.V17.ThemeOverlay.Dialog" parent="ThemeOverlay.AppCompat.Dialog" />
 
-    <style name="Base.AppThemeOverlay.AppCompat.Dialog" parent="Base.AppThemeOverlay.Dialog" />
+    <style name="Base.ThemeOverlay.WuKung.Dialog" parent="Base.V17.ThemeOverlay.Dialog" />
 
-    <style name="AppThemeOverlay.Dialog" parent="Base.AppThemeOverlay.AppCompat.Dialog" />
+    <style name="ThemeOverlay.WuKung.Dialog" parent="Base.ThemeOverlay.WuKung.Dialog" />
 
-    <style name="AppThemeOverlay.Dialog.Input">
+    <style name="ThemeOverlay.WuKung.Dialog.Input">
         <item name="android:windowSoftInputMode">stateAlwaysVisible</item>
     </style>
 
@@ -47,12 +47,12 @@
 
 
     <!-- Toolbar -->
-    <style name="AppWidget.Toolbar" parent="Widget.AppCompat.Toolbar">
+    <style name="Widget.WuKung.Toolbar" parent="Widget.AppCompat.Toolbar">
         <item name="android:background">@color/colorPrimary</item>
-        <item name="titleTextAppearance">@style/AppTextAppearance.Widget.Toolbar.Title</item>
+        <item name="titleTextAppearance">@style/TextAppearance.Widget.WuKung.Toolbar.Title</item>
     </style>
 
-    <style name="AppTextAppearance.Widget.Toolbar.Title" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+    <style name="TextAppearance.Widget.WuKung.Toolbar.Title" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
         <item name="android:textSize">@dimen/toolbar_title_text_size</item>
         <item name="android:textStyle">bold</item>
     </style>
@@ -143,9 +143,9 @@
         <item name="tabMode">scrollable</item>
     </style>
 
-    <style name="Base.KsMain" parent="AppTheme" />
+    <style name="Base.Theme.WuKung.KsMain" parent="Theme.WuKung" />
 
-    <style name="Base.KsMain.AppCompat" />
+    <style name="Theme.WuKung.KsMain" parent="Base.Theme.WuKung.KsMain" />
 
-    <style name="AppTheme.KsMain" parent="Base.KsMain.AppCompat" />
+    <style name="Theme.WuKung.Fullscreen" parent="Theme.MountX.DayNight.NoActionBar.Fullscreen" />
 </resources>
