@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <style name="Theme.WuKung" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Color palette -->
@@ -102,6 +102,7 @@
     <!-- Button -->
     <style name="Base.AppWidget.Button" parent="Widget.AppCompat.Button">
         <item name="android:background">@drawable/btn_default_shape</item>
+        <item name="android:backgroundTint" tools:ignore="NewApi">@color/colorAccent</item>
         <item name="android:minHeight">0dp</item>
         <item name="android:minWidth">0dp</item>
     </style>
