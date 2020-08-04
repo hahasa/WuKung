@@ -3,6 +3,7 @@ package io.mountx.wukung.settings
 import android.content.Context
 import android.content.SharedPreferences
 import android.content.res.Configuration
+import android.graphics.drawable.ColorDrawable
 import android.os.Build
 import android.os.Bundle
 import android.view.View
@@ -22,10 +23,18 @@ class SetNightModeFragment : MxFragment(R.layout.settings_fragment_set_night_mod
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        compatSetButtonNullPerL()
         initSwitchFollowSystem()
         initDayNightMode()
         btn_save.setOnClickListener {
             performClickButtonSave()
+        }
+    }
+
+    private fun compatSetButtonNullPerL() {
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
+            radio_button_night_mode_day.buttonDrawable = ColorDrawable()
+            radio_button_night_mode_night.buttonDrawable = ColorDrawable()
         }
     }
 

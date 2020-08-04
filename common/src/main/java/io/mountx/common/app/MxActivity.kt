@@ -83,6 +83,12 @@ open class MxActivity : LogActivity() {
         }
     }
 
+    protected fun compatRequestLayoutFullscreenStable() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            requestLayoutFullscreenStable()
+        }
+    }
+
     companion object {
         private val SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN_STABLE
             get() = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN or View.SYSTEM_UI_FLAG_LAYOUT_STABLE
