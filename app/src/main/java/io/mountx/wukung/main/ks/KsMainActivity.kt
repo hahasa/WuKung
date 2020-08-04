@@ -17,7 +17,7 @@ class KsMainActivity : MxActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        requestLayoutFullscreenStable()
+        compatRequestLayoutFullscreenStable()
         setContentView(R.layout.ks_activity_main)
         initContentView()
         initViewPager()
